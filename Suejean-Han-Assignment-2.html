@@ -525,9 +525,10 @@ summary(config.modelOUT, fit.measures = TRUE, standardized = TRUE)</code></pre>
 ##    .Q9_29             0.674    0.102    6.588    0.000    0.674    0.504
 ##     Conduct           1.000                               1.000    1.000</code></pre>
 <p>χ²(18) = 40.066, p &lt; .01, indicating poor fit of the data. When we
-look at approximate fit indices, RMSEA = 0.083, 90% CI [0.048, 0.117],
-which both indicate that the configural model as a baseline is
-acceptable but needs further metric and scalar invariance testing.</p>
+look at robust approximate fit indices, RMSEA = 0.122, 90% CI [0.071,
+0.173], and CFI = 0.947, which both indicate that the configural model
+as a baseline is acceptable but needs further metric and scalar
+invariance testing.</p>
 <pre class="r"><code>metric.model &lt;- &#39;
   Conduct =~ c(L1, L1)*Q9_3 + c(L2, L2)*Q9_8 + c(L3, L3)*Q9_22 + 
              c(L4, L4)*Q9_25 + c(L5, L5)*Q9_26 + c(L6, L6)*Q9_29
