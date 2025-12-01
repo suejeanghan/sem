@@ -896,10 +896,10 @@ summary(scalar.modelOUT, fit.measures = TRUE, standardized = TRUE)</code></pre>
 ## scalar.modelOUT 28 5288.7 5389.7 90.841     7.1235 0.051105       5     0.2116</code></pre>
 <p>Δχ²(5) = 7.124, p = .21, so scalar invariance holds. There is no
 measurement bias in the way conduct problem was measured across 6 items
-for both boys and girls. Comparing latent means of boys and girls is
-valid and we got -0.183, p = .09, meaning girls having a latent mean
-that is 0.182 lower than boys, although not statistically
-significant.</p>
+for both boys and girls. Therefore, comparing latent means of boys and
+girls is valid, and we got -0.183, p = .09, meaning latent conduct
+problems mean for girls is 0.182 lower than boys, although not
+statistically significant.</p>
 <pre class="r"><code>ALEs.model &lt;- &#39;
   Conduct =~ c(L1,L1)*Q9_3 + c(L2,L2)*Q9_8 + c(L3,L3)*Q9_22 +
              c(L4,L4)*Q9_25 + c(L5,L5)*Q9_26 + c(L6,L6)*Q9_29
@@ -1082,12 +1082,10 @@ summary(ALEs.modelOUT, fit.measures = TRUE, standardized = TRUE)</code></pre>
 ##    .Q9_26             0.261    0.060    4.334    0.000    0.261    0.356
 ##    .Q9_29             0.688    0.099    6.937    0.000    0.688    0.537
 ##    .Conduct           0.622    0.144    4.328    0.000    0.515    0.515</code></pre>
-<p>The output shows that girls have a different loadings (b = 0.24, p
-&lt; .001, b* = 0.70) with a large effect compared to boys (b = 0.139, p
-&lt; .001, 0.38) with a medium effect. We took a scalar invariant model
-and on top of that added ALEs as a predictor of the latent factor CP. In
-both groups, ALEs is a significant predictor of conduct problems but
-it’s stronger for girls.</p>
+<p>We took a scalar invariant model and on top of that added ALEs as a
+predictor of the latent factor conduct problems. Girls have a different
+loadings (b = 0.24, p &lt; .001, b* = 0.70) with a large effect compared
+to boys (b = 0.139, p &lt; .001, b* = 0.38) with a medium effect.</p>
 <pre class="r"><code>ALEs.model_equal &lt;- &#39;
   Conduct =~ c(L1,L1)*Q9_3 + c(L2,L2)*Q9_8 + c(L3,L3)*Q9_22 +
              c(L4,L4)*Q9_25 + c(L5,L5)*Q9_26 + c(L6,L6)*Q9_29
